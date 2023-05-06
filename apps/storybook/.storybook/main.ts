@@ -13,5 +13,20 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  typescript: {
+    // Overrides the default Typescript configuration to allow multi-package components to be documented via Autodocs.
+    reactDocgen: "react-docgen",
+    skipBabel: true,
+    check: false,
+  },
+  previewHead: (head) => `
+  ${head}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;900&display=swap"
+    rel="stylesheet"
+  />
+`,
 };
 export default config;
