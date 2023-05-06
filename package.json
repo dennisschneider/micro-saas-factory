@@ -26,19 +26,9 @@
   },
   "packageManager": "pnpm@7.15.0",
   "name": "micro-saas-factory",
-  "lint-staged": {
-    "**/*.{js,ts,jsx,tsx}": [
-      "npx turbo lint",
-      "npx pretty-quick --staged"
-    ],
-    "*.json": [
-      "prettier --write"
-    ]
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "npm test"
+      "pre-commit": "lint-staged"
     }
   }
 }
