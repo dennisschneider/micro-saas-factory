@@ -26,10 +26,12 @@
   "name": "micro-saas-factory",
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
+      "npx turbo lint --fix",
+      "npx pretty-quick --staged"
     ],
     "packages/ui/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
+      "npx turbo lint --fix",
+      "npx pretty-quick --staged"
     ],
     "*.json": [
       "prettier --write"
