@@ -16,14 +16,12 @@
     "prettier-plugin-tailwindcss": "^0.2.8",
     "pretty-quick": "^3.1.3",
     "tailwindcss": "^3.3.2",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@7.15.0",
-  "name": "micro-saas-factory",
-  "dependencies": {
+    "turbo": "latest",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2"
   },
+  "packageManager": "pnpm@7.15.0",
+  "name": "micro-saas-factory",
   "lint-staged": {
     "apps/**/*.{js,ts,jsx,tsx}": [
       "eslint --fix"
