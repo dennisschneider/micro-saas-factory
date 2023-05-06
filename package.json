@@ -5,7 +5,8 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-front": "lint-staged"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.3",
@@ -25,12 +26,8 @@
   "packageManager": "pnpm@7.15.0",
   "name": "micro-saas-factory",
   "lint-staged": {
-    "apps/**/*.{js,ts,jsx,tsx}": [
-      "npx turbo lint --fix",
-      "npx pretty-quick --staged"
-    ],
-    "packages/ui/**/*.{js,ts,jsx,tsx}": [
-      "npx turbo lint --fix",
+    "**/*.{js,ts,jsx,tsx}": [
+      "npx turbo lint",
       "npx pretty-quick --staged"
     ],
     "*.json": [
